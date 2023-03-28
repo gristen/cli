@@ -71,7 +71,7 @@ public class AddPublisherController {
 
     public static void addPublishing(PublishingEntity publishing) throws IOException {
         System.out.println(publishing.toString());
-        publishing.setId(null);
+        publishing.setPublisher_id(null);
         http.post(api+"publisher/add", gson.toJson(publishing).toString());
     }
 }

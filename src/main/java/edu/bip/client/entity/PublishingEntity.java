@@ -6,10 +6,9 @@ import java.util.List;
 
 @Data
 public class PublishingEntity {
-    private Long id;
+    private Long publisher_id;
     private String publisher;
     private String city;
-    private List<BookEntity> book;
 
     @Override
     public String toString() {

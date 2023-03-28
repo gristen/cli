@@ -138,8 +138,8 @@ public class ApplicationController {
     private void click_removePublisher() throws IOException {
         PublishingEntity selectedPublisher = tablePublishers.getSelectionModel().getSelectedItem();
         if (selectedPublisher != null) {
-            System.out.println(selectedPublisher.getId());
-            System.out.println(http.delete(api+"publisher/", selectedPublisher.getId()));
+            System.out.println(selectedPublisher.getPublisher_id());
+            System.out.println(http.delete(api+"publisher/", selectedPublisher.getPublisher_id()));
             publishersData.remove(selectedPublisher);
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -235,6 +235,7 @@ public class ApplicationController {
 
     public static void getDataPublishers() throws Exception {
         String res = http.get(api,"publisher/all");
+        System.out.println(res);
         System.out.println(res);
 
         JsonObject base = gson.fromJson(res, JsonObject.class);

@@ -10,7 +10,6 @@ public class AuthorEntity {
     private String name;
     private String surname;
     private String lastname;
-    private List<BookEntity> book;
 
     @Override
     public String toString() {
